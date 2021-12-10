@@ -43,4 +43,10 @@ public class PermutatorTest {
         assert (permutations.size() != 60);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void nullPassedAsParameterThrowsException(){
+        Permutator.availablePermutations(null);
+        assert false;
+    }
+
 }
